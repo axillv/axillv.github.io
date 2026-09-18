@@ -3,15 +3,47 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>axillv - Personal rclone Drive App</title>
-<style>body{font-family:system-ui,Arial;max-width:780px;margin:40px auto;padding:0 20px;line-height:1.6;color:#222}h1{font-size:2em}a{color:#0366d6}</style>
+<title>axillv</title>
+<meta name="description" content="Personal site: an interactive 3x3x3 cube slicer puzzle, and info about a personal rclone Google Drive app.">
+<style>
+  :root{--bg:#0f172a;--panel:#1e293b;--line:#334155;--fg:#e2e8f0;--muted:#94a3b8;--accent:#38bdf8}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,Arial,sans-serif;line-height:1.6}
+  main{max-width:720px;margin:0 auto;padding:56px 20px 64px}
+  h1{font-size:2.1rem;margin:0 0 4px;letter-spacing:-.02em}
+  .lead{color:var(--muted);margin:0 0 32px}
+  .cards{list-style:none;padding:0;margin:0;display:grid;gap:14px}
+  .card{display:block;text-decoration:none;color:inherit;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:18px 20px;transition:border-color .15s,transform .15s}
+  .card:hover{border-color:var(--accent);transform:translateY(-2px)}
+  .card strong{display:block;font-size:1.12rem;color:var(--accent);margin-bottom:4px}
+  .card span{color:var(--muted);font-size:.95rem}
+  footer{margin-top:36px;color:var(--muted);font-size:.9rem}
+  a{color:var(--accent)}
+</style>
 </head>
 <body>
-<h1>axillv - Personal rclone Google Drive App</h1>
-<p>This is the homepage for a personal, single-user <a href="https://rclone.org">rclone</a> application used to access Google Drive via the Drive API.</p>
-<p><strong>Purpose:</strong> Private live mount of Google Drive on Fedora Linux (~/GoogleDrive via rclone) for personal file browsing. No data is shared with third parties.</p>
-<p><strong>Contact:</strong> GitHub <a href="https://github.com/axillv">axillv</a></p>
-<p><a href="privacy.html">Privacy Policy</a> | <a href="https://github.com/axillv/axillv.github.io">Source</a></p>
-<p><small>Required by Google Cloud OAuth consent screen for publishing. App is not publicly distributed.</small></p>
+<main>
+  <h1>axillv</h1>
+  <p class="lead">A couple of small things I made and use.</p>
+
+  <ul class="cards">
+    <li>
+      <a class="card" href="cube-slicer/">
+        <strong>Cube Slicer</strong>
+        <span>Interactive version of the classic puzzle: cut a 3&times;3&times;3 cube into 27 unit cubes with as few plane cuts as possible, rearranging pieces if you like. Includes the proof that 6 is optimal.</span>
+      </a>
+    </li>
+    <li>
+      <a class="card" href="rclone/">
+        <strong>rclone Google Drive app</strong>
+        <span>Info about the personal, single-user rclone OAuth app used to mount Google Drive on Fedora Linux.</span>
+      </a>
+    </li>
+  </ul>
+
+  <footer>
+    GitHub <a href="https://github.com/axillv">axillv</a> &middot; <a href="privacy.html">Privacy</a>
+  </footer>
+</main>
 </body>
 </html>
